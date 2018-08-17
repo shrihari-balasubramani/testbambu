@@ -1,0 +1,61 @@
+.container{
+  width:1240px;
+  height:540px;
+  display:flex;
+  justify-content:center;
+  box-sizing: border-box;
+  padding:60px;
+  .borders{
+    position:relative;
+    .y-axis{
+      height: 100%;
+      width: 40px;      
+      position: absolute;
+      left:-40px;
+      .left-ticks{
+        position:absolute;
+        text-align: right;
+        width:100%;
+        &:after{
+          content:'-';
+        }
+      }      
+    }
+    .layout-scroll{
+        width: 100%;
+        height: 100%;
+        overflow:auto;
+        .records{
+                width:  100%;
+                height:  100%;
+                display:table;
+                table-layout: fixed;
+                .each-element{
+                    width:  30px;
+                    height:  100%;
+                  display:table-cell;
+                    border-right: 1px solid #dedada;
+                    position:  relative;
+                    .element-op-cl{
+                        position:  absolute;
+                        width: 2px;
+                        left: 30px;                    
+                    }
+                    .elem-op,.elem-close{
+                        position: absolute;
+                        height:2px;
+                        width:10px;
+                    }        
+                    .elem-close{
+                        right: -10px;
+                    }
+                    .elem-op{
+                          right: 0;
+                    }
+                }
+            }          
+    }
+    
+  }
+
+}
